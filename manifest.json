@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 3,
+    "name": "Market Boy",
+    "version": "0.0.11",
+    "description": "Save time researching NFT attributes on DigitalEyes and MagicEden!",
+    "icons": {
+        "16": "boy16.png",
+        "48": "boy48.png",
+        "120": "boy120.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "Load Details",
+        "default_icon": "boy48.png"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "author": "Big Boys NYC",
+    "web_accessible_resources": [
+        {
+            "resources" : [
+                "addDetails.js",
+                "gmootUniqueItemData.json",
+            ],
+            "matches" : [ "*://*/*" ],
+            "extension_ids" : [ "hojgdpdkilmbfncmlcacakhljdnhmobg","olfkialpibdkjdlkiinmcaaljblnjgmc" ]
+        }
+    ]
+}
